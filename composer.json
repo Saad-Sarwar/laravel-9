@@ -1,0 +1,65 @@
+{
+    "name": "sirodiaz/laravel-redirection",
+    "description": "Laravel package that allows storing in database (or other sources) urls to redirect for SEO purposes",
+    "keywords": [
+        "sirodiaz",
+        "laravel",
+        "laravel-redirection",
+        "seo",
+        "url",
+        "slug",
+        "redirects",
+        "redirect",
+        "laravel-redirect",
+        "laravel-redirects"
+    ],
+    "homepage": "https://github.com/SiroDiaz/laravel-redirection",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Siro Díaz Palazón",
+            "email": "sirodiaz93@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/contracts": "^8.0|^9.0",
+        "illuminate/database": "^8.0|^9.0",
+        "illuminate/support": "^8.0|^9.0",
+        "spatie/laravel-package-tools": "^1.9.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.2",
+        "nunomaduro/collision": "^5.3|^6.0",
+        "orchestra/testbench": "^6.15|^7.0",
+        "vimeo/psalm": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "SiroDiaz\\Redirection\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SiroDiaz\\Redirection\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit --no-coverage",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "cs-fix": "vendor/bin/php-cs-fixer fix --config .php_cs.dist.php --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SiroDiaz\\Redirection\\RedirectionServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
